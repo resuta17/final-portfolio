@@ -78,6 +78,34 @@ onMounted(() => {
                 technical skills, learn quickly, and contribute to organizational success.
               </span>
             </p>
+            <div class="mt-6 flex justify-start items-start space-x-4">
+              <a href="mailto:jlhebres15@gmail.com" class="hover:cursor-pointer">
+                <img
+                  src="./assets/email-50.png"
+                  width="35"
+                  height="35"
+                  class="relative z-10 border-2 border-teal-400 rounded-full p-1 transform transition-transform duration-300 hover:bg-teal-200 hover:scale-125"
+                />
+              </a>
+
+              <a href="https://www.linkedin.com/in/jlhebres/" class="hover:cursor-pointer">
+                <img
+                  src="./assets/linked-in-48.png"
+                  width="35"
+                  height="35"
+                  class="relative z-10 border-2 border-teal-400 rounded-full p-1 transform transition-transform duration-300 hover:bg-teal-200 hover:scale-125"
+                />
+              </a>
+
+              <a href="https://github.com/resuta17" class="hover:cursor-pointer">
+                <img
+                  src="./assets/github-50.png"
+                  width="35"
+                  height="35"
+                  class="relative z-10 border-2 border-teal-400 rounded-full p-1 transform transition-transform duration-300 hover:bg-teal-200 hover:scale-125"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -97,8 +125,13 @@ onMounted(() => {
     </section>
 
     <!-- Next Section (content hidden until scroll) -->
-    <section class="min-h-screen bg-gray-900 flex justify-center items-center text-white text-3xl">
-      TEST CONTENT
+    <section
+      class="font-poppins min-h-screen bg-gray-900 flex justify-items-center-safe flex-col text-white text-3xl"
+    >
+      <p class="mt-10 text-center text-2xl text-teal-400 font-bold">ABOUT ME</p>
+      <div class="flex justify-center items-center min-h-[90vh]">
+        <p>TEST CONTENT</p>
+      </div>
     </section>
   </div>
 </template>
