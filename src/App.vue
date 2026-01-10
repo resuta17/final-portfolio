@@ -43,7 +43,7 @@ onMounted(() => {
 
 <template>
   <nav
-    class="sticky top-0 z-50 h-12 bg-slate-950 backdrop-blur-xl border-b border-white/10 flex justify-between px-20 items-center"
+    class="sticky top-0 z-50 h-12 bg-slate-950 backdrop-blur-xl border-b border-white/10 flex justify-between px-10 items-center overflow-hidden"
   >
     <div class="glow-layer">
       <span v-for="i in 5" :key="i" class="glow"></span>
@@ -51,7 +51,7 @@ onMounted(() => {
     <div>
       <p class="font-sans font-bold text-teal-400 shiny-text">JL Hebres</p>
     </div>
-    <div class="text-teal-400 px-2 text-sm items-center flex justify-center space-x-4">
+    <div class="text-teal-400 px-2 text-sm items-center flex justify-center space-x-6">
       <div>About</div>
       <div>Experiences</div>
       <div>Skills</div>
@@ -64,11 +64,11 @@ onMounted(() => {
     </button>
   </nav>
 
-  <div class="relative min-h-screen bg-slate-950 text-white">
+  <div class="relative min-h-[calc(100vh-var(--nav-h))] bg-slate-950 text-white overflow-x-hidden">
     <section
       class="relative flex flex-col justify-center items-center min-h-screen text-center px-6"
     >
-      <div class="flex min-w-screen min-h-screen">
+      <div class="flex w-full min-h-screen">
         <div class="w-1/2 text-white flex items-center justify-center">
           <div class="relative inline-block">
             <div class="neon-bg"></div>
@@ -174,7 +174,7 @@ onMounted(() => {
 }
 
 .glow:nth-child(1) {
-  top: 10%;
+  top: 120%;
   left: 20%;
   animation-duration: 28s;
 }
@@ -185,7 +185,7 @@ onMounted(() => {
 }
 .glow:nth-child(3) {
   top: 1220%;
-  left: 20%;
+  left: 50%;
   animation-duration: 26s;
 }
 .glow:nth-child(4) {
