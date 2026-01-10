@@ -42,10 +42,29 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative min-h-screen bg-slate-950 text-white overflow-hidden">
+  <nav
+    class="sticky top-0 z-50 h-12 bg-slate-950 backdrop-blur-xl border-b border-white/10 flex justify-between px-20 items-center"
+  >
     <div class="glow-layer">
-      <span v-for="i in 4" :key="i" class="glow"></span>
+      <span v-for="i in 5" :key="i" class="glow"></span>
     </div>
+    <div>
+      <p class="font-sans font-bold text-teal-400 shiny-text">JL Hebres</p>
+    </div>
+    <div class="text-teal-400 px-2 text-sm items-center flex justify-center space-x-4">
+      <div>About</div>
+      <div>Experiences</div>
+      <div>Skills</div>
+      <div>Projects</div>
+    </div>
+    <button
+      class="text-teal-400 px-2 text-xs border-1 rounded-full hover:cursor-pointer hover:bg-teal-900"
+    >
+      Download CV
+    </button>
+  </nav>
+
+  <div class="relative min-h-screen bg-slate-950 text-white">
     <section
       class="relative flex flex-col justify-center items-center min-h-screen text-center px-6"
     >
@@ -84,7 +103,7 @@ onMounted(() => {
                   src="./assets/email-50.png"
                   width="35"
                   height="35"
-                  class="relative z-10 border-2 border-teal-400 rounded-full p-1 transform transition-transform duration-300 hover:bg-teal-200 hover:scale-125"
+                  class="relative z-10 border-2 border-teal-400 rounded-full p-1 transform transition-transform duration-300 hover:bg-teal-900 hover:scale-125"
                 />
               </a>
 
@@ -93,7 +112,7 @@ onMounted(() => {
                   src="./assets/linked-in-48.png"
                   width="35"
                   height="35"
-                  class="relative z-10 border-2 border-teal-400 rounded-full p-1 transform transition-transform duration-300 hover:bg-teal-200 hover:scale-125"
+                  class="relative z-10 border-2 border-teal-400 rounded-full p-1 transform transition-transform duration-300 hover:bg-teal-900 hover:scale-125"
                 />
               </a>
 
@@ -102,7 +121,7 @@ onMounted(() => {
                   src="./assets/github-50.png"
                   width="35"
                   height="35"
-                  class="relative z-10 border-2 border-teal-400 rounded-full p-1 transform transition-transform duration-300 hover:bg-teal-200 hover:scale-125"
+                  class="relative z-10 border-2 border-teal-400 rounded-full p-1 transform transition-transform duration-300 hover:bg-teal-900 hover:scale-125"
                 />
               </a>
             </div>
@@ -160,18 +179,18 @@ onMounted(() => {
   animation-duration: 28s;
 }
 .glow:nth-child(2) {
-  top: 40%;
+  top: 1000%;
   left: 90%;
   animation-duration: 32s;
 }
 .glow:nth-child(3) {
-  top: 70%;
+  top: 1220%;
   left: 20%;
   animation-duration: 26s;
 }
 .glow:nth-child(4) {
-  top: 20%;
-  left: 100%;
+  top: 200%;
+  left: 60%;
   animation-duration: 34s;
 }
 .neon-bg {
@@ -218,5 +237,32 @@ html {
 .animate-blink {
   display: inline-block;
   animation: blink 1s infinite;
+}
+
+.shiny-text {
+  text-shadow:
+    0 0 5px rgba(45, 212, 191, 0.9),
+    0 0 15px rgba(45, 212, 191, 0.7),
+    0 0 30px rgba(45, 212, 191, 0.5),
+    0 0 60px rgba(45, 212, 191, 0.3);
+}
+@keyframes neon-pulse {
+  0%,
+  100% {
+    text-shadow:
+      0 0 5px rgba(45, 212, 191, 0.8),
+      0 0 15px rgba(45, 212, 191, 0.6),
+      0 0 30px rgba(45, 212, 191, 0.4);
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(45, 212, 191, 1),
+      0 0 25px rgba(45, 212, 191, 0.8),
+      0 0 50px rgba(45, 212, 191, 0.6);
+  }
+}
+
+.shiny-text {
+  animation: neon-pulse 2.5s ease-in-out infinite;
 }
 </style>
