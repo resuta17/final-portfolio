@@ -52,15 +52,15 @@ onMounted(() => typeWriter())
     </div>
 
     <nav
-      class="sticky top-0 z-50 h-12 bg-slate-950/0 backdrop-blur-xl flex justify-between px-10 items-center transition-all duration-500"
+      class="sticky top-0 z-50 h-10 bg-slate-950/0 backdrop-blur-xl flex justify-between px-10 items-center transition-all duration-500"
       :class="{ 'border-b-1 border-white/20': isScrolled }"
     >
       <div><p class="font-sans font-bold text-teal-400 shiny-text">JL Hebres</p></div>
       <div class="text-teal-400 px-2 text-sm items-center flex justify-center space-x-6">
-        <div>About</div>
-        <div>Experiences</div>
-        <div>Skills</div>
         <div>Projects</div>
+        <div>Experience</div>
+        <div>Skills</div>
+        <div>About Me</div>
       </div>
       <button
         class="text-teal-400 px-2 text-xs border-1 rounded-full hover:cursor-pointer hover:bg-teal-900"
@@ -107,7 +107,7 @@ onMounted(() => typeWriter())
               class="relative z-10 border-2 border-teal-400 rounded-full p-1 transition-transform duration-300 hover:bg-teal-900 hover:scale-125"
             />
           </a>
-          <a href="https://www.linkedin.com/in/jlhebres/">
+          <a href="https://www.linkedin.com/in/jlhebres/" target="_blank">
             <img
               src="./assets/linked-in-48.png"
               width="35"
@@ -115,7 +115,7 @@ onMounted(() => typeWriter())
               class="relative z-10 border-2 border-teal-400 rounded-full p-1 transition-transform duration-300 hover:bg-teal-900 hover:scale-125"
             />
           </a>
-          <a href="https://github.com/resuta17">
+          <a href="https://github.com/resuta17" target="_blank">
             <img
               src="./assets/github-50.png"
               width="35"
@@ -141,11 +141,41 @@ onMounted(() => typeWriter())
     </section>
 
     <section
-      class="font-poppins min-h-screen bg-gray-900 flex flex-col justify-center items-center text-white text-3xl z-10 relative"
+      class="font-poppins min-h-[90vh] bg-slate-950/60 flex flex-col justify-center items-center text-white text-3xl z-10 relative"
     >
-      <p class="mt-10 text-center text-2xl text-teal-400 font-bold">ABOUT ME</p>
-      <div class="flex justify-center items-center min-h-[90vh]">
-        <p>TEST CONTENT</p>
+      <p class="mt-20 text-center text-2xl text-teal-400 font-bold">Projects</p>
+      <div class="flex justify-center items-center min-h-[90vh] space-x-10">
+        <div
+          class="h-80 w-65 bg-white/10 backdrop-blur-md rounded-xl shadow-2xl shadow-teal-900 border-2 border-teal-900 p-5"
+        >
+          <p class="text-center pb-4 text-md">1st Project</p>
+          <p class="text-sm">BODY TEST TEXT</p>
+        </div>
+        <div
+          class="h-80 w-65 bg-white/10 backdrop-blur-md rounded-xl shadow-2xl shadow-teal-900 border-2 border-teal-900 p-5"
+        >
+          <p class="text-center pb-4 text-md">2nd Project</p>
+          <p class="text-sm">BODY TEST TEXT</p>
+        </div>
+        <div
+          class="h-80 w-65 bg-white/10 backdrop-blur-md rounded-xl shadow-2xl shadow-teal-900 border-2 border-teal-900 p-5"
+        >
+          <p class="text-center pb-4 text-md">3rd Project</p>
+          <p class="text-sm">BODY TEST TEXT</p>
+        </div>
+
+        <div
+          class="h-80 w-65 bg-white/10 backdrop-blur-md rounded-xl shadow-2xl shadow-teal-900 border-2 border-teal-900 p-5"
+        >
+          <p class="text-center pb-4 text-md">4th Project</p>
+          <p class="text-sm">BODY TEST TEXT</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative justify-center items-center min-h-[90vh] px-6 z-10">
+      <div>
+        <p class="mt-20 text-center text-2xl text-teal-400 font-bold">Experience</p>
       </div>
     </section>
   </div>
